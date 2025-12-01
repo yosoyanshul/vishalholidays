@@ -21,6 +21,16 @@ const HERO_VIDEOS = [
     poster: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=3540&auto=format&fit=crop",
     theme: "richness",
   },
+  {
+    src: "https://videos.pexels.com/video-files/2169542/2169542-hd_1920_1080_30fps.mp4",
+    poster: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=3539&auto=format&fit=crop",
+    theme: "thailand_beach",
+  },
+  {
+    src: "https://videos.pexels.com/video-files/2022395/2022395-hd_1920_1080_30fps.mp4",
+    poster: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=3474&auto=format&fit=crop",
+    theme: "nightlife",
+  },
 ];
 
 export function Hero() {

@@ -25,12 +25,12 @@ const TESTIMONIALS = [
 ];
 
 const LOGOS = [
-  "Stark Industries",
-  "Wayne Enterprises",
-  "Cyberdyne Systems",
-  "Massive Dynamic",
-  "Tyrell Corp",
-  "Oscorp",
+  "Tata Group",
+  "Reliance Industries",
+  "Aditya Birla Group",
+  "Mahindra & Mahindra",
+  "Wipro",
+  "Infosys",
 ];
 
 export function Testimonials() {
