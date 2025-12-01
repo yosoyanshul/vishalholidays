@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #050b14;
+  --color-obsidian-light: #0a1424;
+  --color-glacial: #64ffda;
+  --color-glacial-dim: #4cd6b3;
+  --color-starlight: #e6f1ff;
+  --color-starlight-dim: #8892b0;
+
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Base Styles */
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-starlight);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-obsidian-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-glacial);
+}
