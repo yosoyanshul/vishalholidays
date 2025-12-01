@@ -57,12 +57,12 @@ export function Services() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group relative h-[500px] overflow-hidden rounded-sm cursor-pointer"
             >
-              {/* Background Image */}
               <div className="absolute inset-0">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />

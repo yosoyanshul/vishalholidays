@@ -24,8 +24,11 @@ const HERO_VIDEOS = [
 ];
 
 export function Hero() {
-  // Initialize state with a function that runs only once on client mount
-  const [selectedVideo] = useState(() => {
+  const [isMounted, setIsMounted] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(HERO_VIDEOS[0]);
+
+  useEffect(() => {
+    // Only run on client side
     const randomIndex = Math.floor(Math.random() * HERO_VIDEOS.length);
     const video = HERO_VIDEOS[randomIndex];
     console.log('🎬 Hero Video Selection:', {
@@ -34,31 +37,31 @@ export function Hero() {
       src: video.src,
       timestamp: new Date().toISOString()
     });
-    return video;
-  });
-
-  useEffect(() => {
-    console.log('🎥 Hero component mounted with video:', selectedVideo.theme);
-  }, [selectedVideo]);
+    setSelectedVideo(video);
+    setIsMounted(true);
+    console.log('🎥 Hero component mounted with video:', video.theme);
+  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-obsidian/40 z-10" /> {/* Overlay */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-          poster={selectedVideo.poster}
-          onLoadedData={() => console.log('✅ Video loaded:', selectedVideo.theme)}
-          onError={(e) => console.error('❌ Video error:', selectedVideo.theme, e)}
-        >
-          <source src={selectedVideo.src} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {isMounted && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster={selectedVideo.poster}
+            onLoadedData={() => console.log('✅ Video loaded:', selectedVideo.theme)}
+            onError={(e) => console.error('❌ Video error:', selectedVideo.theme, e)}
+          >
+            <source src={selectedVideo.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
 
       {/* Content */}
