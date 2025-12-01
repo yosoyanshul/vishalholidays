@@ -6,23 +6,23 @@ import { ArrowRight } from "lucide-react";
 
 const SERVICES = [
   {
-    title: "Dealer & Distributor Meets",
+    title: "Corporate Events & Conferences",
     description:
-      "Grand scale events that honor your network's success. Seamless logistics for hundreds of partners in exotic locations.",
+      "Annual meets, product launches, and team celebrations. We handle everything from venue to entertainment for groups of any size.",
     image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=3540&auto=format&fit=crop",
   },
   {
-    title: "Incentive Trips",
+    title: "Incentive & Reward Trips",
     description:
-      "Motivate your top retailers and wholesalers with luxury getaways to Thailand, Dubai, or Bali. Drive performance with rewards.",
+      "Motivate your teams with luxury getaways to Dubai, Thailand, or Bali. Perfect for top performers, dealers, and partners.",
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=3540&auto=format&fit=crop",
   },
   {
-    title: "Corporate Galas",
+    title: "Team Offsites & Retreats",
     description:
-      "Unforgettable award nights and networking dinners with world-class entertainment, food, and ambiance.",
+      "Strategic planning sessions and team-building experiences in inspiring locations. Strengthen bonds while achieving goals.",
     image:
       "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=3387&auto=format&fit=crop",
   },
@@ -40,10 +40,10 @@ export function Services() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-starlight mb-4">
-            Celebrate Your Success
+            Tailored Corporate Experiences
           </h2>
           <p className="text-starlight/60 max-w-2xl mx-auto">
-            We understand the Indian business ecosystem. We create environments where relationships are strengthened and deals are celebrated.
+            Whether it's a team offsite, dealer meet, or annual conference, we create seamless experiences that leave lasting impressions.
           </p>
         </motion.div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -25,9 +25,21 @@ const HERO_VIDEOS = [
 
 export function Hero() {
   // Initialize state with a function that runs only once on client mount
-  const [selectedVideo] = useState(() =>
-    HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)]
-  );
+  const [selectedVideo] = useState(() => {
+    const randomIndex = Math.floor(Math.random() * HERO_VIDEOS.length);
+    const video = HERO_VIDEOS[randomIndex];
+    console.log('🎬 Hero Video Selection:', {
+      index: randomIndex,
+      theme: video.theme,
+      src: video.src,
+      timestamp: new Date().toISOString()
+    });
+    return video;
+  });
+
+  useEffect(() => {
+    console.log('🎥 Hero component mounted with video:', selectedVideo.theme);
+  }, [selectedVideo]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
@@ -41,6 +53,8 @@ export function Hero() {
           playsInline
           className="w-full h-full object-cover"
           poster={selectedVideo.poster}
+          onLoadedData={() => console.log('✅ Video loaded:', selectedVideo.theme)}
+          onError={(e) => console.error('❌ Video error:', selectedVideo.theme, e)}
         >
           <source src={selectedVideo.src} type="video/mp4" />
           Your browser does not support the video tag.
@@ -55,9 +69,9 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-starlight mb-6 leading-tight"
         >
-          Reward Your <br />
+          Elevate Your <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">
-            Growth Partners
+            Corporate Events
           </span>
         </motion.h1>
 
@@ -67,8 +81,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-xl text-starlight/90 max-w-3xl mx-auto mb-10 font-light"
         >
-          From high-energy Dealer Meets in Dubai to exclusive Distributor Incentives in Thailand.
-          We craft experiences that celebrate your wholesalers and retailers.
+          From team offsites and annual conferences to dealer meets and incentive trips.
+          We create unforgettable experiences for businesses across India and beyond.
         </motion.p>
 
         <motion.div

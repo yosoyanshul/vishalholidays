@@ -111,9 +111,11 @@ export function Contact() {
                 className="w-full bg-obsidian border border-white/10 rounded-none p-3 text-starlight focus:border-glacial focus:outline-none transition-colors appearance-none"
               >
                 <option value="">Select an option</option>
+                <option value="team_offsite">Team Offsite</option>
                 <option value="dealer_meet">Dealer/Distributor Meet</option>
                 <option value="incentive">Incentive Trip</option>
                 <option value="conference">Annual Conference</option>
+                <option value="retreat">Executive Retreat</option>
                 <option value="other">Other</option>
               </select>
               {errors.interest && (
