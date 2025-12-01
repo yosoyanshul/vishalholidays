@@ -7,49 +7,58 @@ import Image from "next/image";
 
 const DESTINATIONS = [
   {
-    id: "swiss-alps",
-    name: "Swiss Alps",
-    top: "28%",
-    left: "51%",
+    id: "dubai",
+    name: "Dubai, UAE",
+    top: "38%",
+    left: "58%",
     image:
-      "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=3540&auto=format&fit=crop",
-    description: "Ski retreats and high-altitude strategy sessions.",
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=3540&auto=format&fit=crop",
+    description: "Luxury, opulence, and world-class experiences.",
   },
   {
-    id: "kyoto",
-    name: "Kyoto, Japan",
-    top: "35%",
-    left: "82%",
+    id: "thailand",
+    name: "Thailand",
+    top: "42%",
+    left: "75%",
     image:
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=3540&auto=format&fit=crop",
-    description: "Zen mindfulness and cultural immersion.",
+      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=3539&auto=format&fit=crop",
+    description: "Tropical paradise with vibrant culture and nightlife.",
   },
   {
-    id: "serengeti",
-    name: "Serengeti",
-    top: "55%",
-    left: "55%",
+    id: "bali",
+    name: "Bali, Indonesia",
+    top: "58%",
+    left: "80%",
     image:
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=3468&auto=format&fit=crop",
-    description: "Luxury safaris and raw leadership challenges.",
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=3538&auto=format&fit=crop",
+    description: "Island serenity and spiritual retreats.",
   },
   {
-    id: "antarctica",
-    name: "Antarctica",
-    top: "85%",
-    left: "45%",
+    id: "goa",
+    name: "Goa, India",
+    top: "45%",
+    left: "67%",
     image:
-      "https://images.unsplash.com/photo-1516977621718-2292158f9d01?q=80&w=3540&auto=format&fit=crop",
-    description: "The ultimate frontier for executive expeditions.",
+      "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=3474&auto=format&fit=crop",
+    description: "Beach bliss and vibrant Indian coastal culture.",
   },
   {
-    id: "patagonia",
-    name: "Patagonia",
-    top: "75%",
-    left: "32%",
+    id: "kerala",
+    name: "Kerala, India",
+    top: "48%",
+    left: "68%",
     image:
-      "https://images.unsplash.com/photo-1518182170546-0766aa6f1a26?q=80&w=3540&auto=format&fit=crop",
-    description: "Rugged beauty for team resilience building.",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=3538&auto=format&fit=crop",
+    description: "Backwaters, tea plantations, and tranquility.",
+  },
+  {
+    id: "rajasthan",
+    name: "Rajasthan, India",
+    top: "40%",
+    left: "67%",
+    image:
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=3540&auto=format&fit=crop",
+    description: "Royal heritage and desert adventures.",
   },
 ];
 

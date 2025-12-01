@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="text-2xl font-playfair font-bold text-starlight">
-              Vishal <span className="text-glacial">Holidays</span>
+              <span className="text-amber-500">Vishal</span> Holidays
             </Link>
             <p className="text-starlight/50 text-sm mt-2">
               The Zenith of Corporate Travel.

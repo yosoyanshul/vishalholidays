@@ -1,10 +1,35 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
+const HERO_VIDEOS = [
+  {
+    src: "https://videos.pexels.com/video-files/856973/856973-hd_1920_1080_25fps.mp4",
+    poster: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=3540&auto=format&fit=crop",
+    theme: "tranquility",
+  },
+  {
+    src: "https://videos.pexels.com/video-files/2169880/2169880-hd_1920_1080_30fps.mp4",
+    poster: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=3540&auto=format&fit=crop",
+    theme: "party",
+  },
+  {
+    src: "https://videos.pexels.com/video-files/3015511/3015511-hd_1920_1080_24fps.mp4",
+    poster: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=3540&auto=format&fit=crop",
+    theme: "richness",
+  },
+];
+
 export function Hero() {
+  const [selectedVideo, setSelectedVideo] = useState(HERO_VIDEOS[0]);
+
+  useEffect(() => {
+    setSelectedVideo(HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)]);
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Video Background */}
@@ -16,12 +41,9 @@ export function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=3540&auto=format&fit=crop"
+          poster={selectedVideo.poster}
         >
-          <source
-            src="https://videos.pexels.com/video-files/856973/856973-hd_1920_1080_25fps.mp4"
-            type="video/mp4"
-          />
+          <source src={selectedVideo.src} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

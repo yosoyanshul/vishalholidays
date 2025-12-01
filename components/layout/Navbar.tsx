@@ -31,8 +31,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-playfair font-bold text-starlight">
-          Vishal <span className="text-glacial">Holidays</span>
+        <Link href="/" className="text-2xl md:text-3xl font-playfair font-bold text-starlight">
+          <span className="text-amber-500">Vishal</span> Holidays
         </Link>
 
         {/* Desktop Nav */}
