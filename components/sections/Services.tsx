@@ -6,23 +6,23 @@ import { ArrowRight } from "lucide-react";
 
 const SERVICES = [
   {
-    title: "Executive Retreats",
+    title: "Dealer & Distributor Meets",
     description:
-      "Strategic offsites in secluded, high-end sanctuaries designed for deep work and breakthrough thinking.",
+      "Grand scale events that honor your network's success. Seamless logistics for hundreds of partners in exotic locations.",
     image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=3540&auto=format&fit=crop",
   },
   {
-    title: "Incentive Travel",
+    title: "Incentive Trips",
     description:
-      "Reward your top performers with once-in-a-lifetime journeys to the world's most exclusive destinations.",
+      "Motivate your top retailers and wholesalers with luxury getaways to Thailand, Dubai, or Bali. Drive performance with rewards.",
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=3540&auto=format&fit=crop",
   },
   {
-    title: "Team Building",
+    title: "Corporate Galas",
     description:
-      "Forge unbreakable bonds through adrenaline-fueled adventures, from Arctic treks to desert rallies.",
+      "Unforgettable award nights and networking dinners with world-class entertainment, food, and ambiance.",
     image:
       "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=3387&auto=format&fit=crop",
   },
@@ -40,11 +40,10 @@ export function Services() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-playfair font-bold text-starlight mb-4">
-            Curated for the Visionary
+            Celebrate Your Success
           </h2>
           <p className="text-starlight/60 max-w-2xl mx-auto">
-            We don't just plan trips; we engineer experiences that align with your
-            corporate ethos and ambition.
+            We understand the Indian business ecosystem. We create environments where relationships are strengthened and deals are celebrated.
           </p>
         </motion.div>
 

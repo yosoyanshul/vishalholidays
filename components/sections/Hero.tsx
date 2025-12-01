@@ -36,6 +36,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-obsidian/40 z-10" /> {/* Overlay */}
         <video
+          key={selectedVideo.src}
           autoPlay
           muted
           loop
@@ -54,11 +55,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-starlight mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-starlight mb-6 leading-tight"
         >
-          Ascend Beyond <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-starlight via-starlight to-starlight/50">
-            The Boardroom
+          Reward Your <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500">
+            Growth Partners
           </span>
         </motion.h1>
 
@@ -66,10 +67,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-xl text-starlight/80 max-w-2xl mx-auto mb-10 font-light"
+          className="text-lg md:text-xl text-starlight/90 max-w-3xl mx-auto mb-10 font-light"
         >
-          Bespoke corporate retreats, incentive trips, and executive adventures
-          designed to inspire visionaries.
+          From high-energy Dealer Meets in Dubai to exclusive Distributor Incentives in Thailand.
+          We craft experiences that celebrate your wholesalers and retailers.
         </motion.p>
 
         <motion.div
@@ -78,11 +79,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col md:flex-row gap-4 justify-center"
         >
-          <Button size="lg" className="min-w-[200px]">
-            Explore Destinations
+          <Button size="lg" className="min-w-[200px] bg-amber-500 hover:bg-amber-600 text-obsidian font-bold">
+            Plan Your Event
           </Button>
-          <Button variant="outline" size="lg" className="min-w-[200px]">
-            Curate Your Trip
+          <Button variant="outline" size="lg" className="min-w-[200px] border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-obsidian">
+            View Destinations
           </Button>
         </motion.div>
       </div>

@@ -6,21 +6,21 @@ import { Quote } from "lucide-react";
 const TESTIMONIALS = [
   {
     quote:
-      "The most seamless executive retreat we've ever had. Every detail was anticipated before we even thought of it.",
-    author: "Alexander V.",
-    role: "CEO, Tech Giant",
+      "We took 150 of our top dealers to Dubai. The arrangements by Vishal Holidays were flawless, from the desert safari to the gala dinner.",
+    author: "Rajesh Gupta",
+    role: "MD, Gupta Textiles Pvt Ltd",
   },
   {
     quote:
-      "Vishal Holidays understands the nuance of high-stakes networking. The setting was perfect for closing our Series B.",
-    author: "Sarah J.",
-    role: "VP Operations, FinTech",
+      "Our annual distributor meet in Thailand was a massive hit. The team handled the logistics for 300 people perfectly.",
+    author: "Amit Patel",
+    role: "Director, Apex Ceramics",
   },
   {
     quote:
-      "Unforgettable. The Antarctica trip changed our leadership dynamic forever. Truly a bonding experience like no other.",
-    author: "Marcus R.",
-    role: "Founder, Unicorn Startup",
+      "Vishal Holidays understands what Indian businessmen need. Great food, luxury stay, and smooth travel. Highly recommended.",
+    author: "Suresh Reddy",
+    role: "CEO, Reddy Pharma Distributors",
   },
 ];
 
