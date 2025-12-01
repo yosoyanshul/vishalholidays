@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -23,12 +23,11 @@ const HERO_VIDEOS = [
   },
 ];
 
-// Select video outside component to ensure it only happens once per page load
-const getRandomVideo = () => HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)];
-
 export function Hero() {
-  // Use useMemo with empty deps to ensure video is selected only once
-  const selectedVideo = useMemo(() => getRandomVideo(), []);
+  // Initialize state with a function that runs only once on client mount
+  const [selectedVideo] = useState(() =>
+    HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)]
+  );
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
