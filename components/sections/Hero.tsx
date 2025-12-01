@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -23,12 +23,12 @@ const HERO_VIDEOS = [
   },
 ];
 
-export function Hero() {
-  const [selectedVideo, setSelectedVideo] = useState(HERO_VIDEOS[0]);
+// Select video outside component to ensure it only happens once per page load
+const getRandomVideo = () => HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)];
 
-  useEffect(() => {
-    setSelectedVideo(HERO_VIDEOS[Math.floor(Math.random() * HERO_VIDEOS.length)]);
-  }, []);
+export function Hero() {
+  // Use useMemo with empty deps to ensure video is selected only once
+  const selectedVideo = useMemo(() => getRandomVideo(), []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
@@ -36,7 +36,6 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-obsidian/40 z-10" /> {/* Overlay */}
         <video
-          key={selectedVideo.src}
           autoPlay
           muted
           loop
